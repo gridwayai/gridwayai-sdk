@@ -1,6 +1,6 @@
 # GridwayAI Python SDK
 
-Official Python SDK for accessing GridwayAI's generative AI services — focused on technical document automation and compliance in high-stakes industries like nuclear energy.
+Official Python SDK for accessing GridwayAI's generative AI services — focused on technical document automation and compliance in the specific technical jargon of nuclear licensing.
 
 ### 🚀 Features
 

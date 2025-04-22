@@ -4,7 +4,7 @@ from .exceptions import AuthenticationError, RateLimitError, APIError
 
 class GridwayAI:
     """
-    GridwayAI client for calling the /embeddings endpoint.
+    GridwayAI python client for calling the /embeddings endpoint.
     """
 
     def __init__(self, api_key: str, base_url: Optional[str] = None):

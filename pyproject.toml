@@ -1,6 +1,6 @@
 [project]
 name = "gridwayai"
-version = "0.1.0"
+version = "0.1.11"
 description = "SDK for accessing GridwayAI endpoints"
 authors = [{ name = "Rob", email = "rob@gridwayai.com" }]
 license = "MIT"
