@@ -34,6 +34,22 @@ pip install pytest
 pytest
 ```
 
+## Logging
+You can enable debug logging to see internal API calls and responses. This is helpful for troubleshooting or during development:
+
+```python
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+
+from gridwayai import GridwayAI
+
+client = GridwayAI(api_key="your-api-key")
+client.embeddings(["Debugging helps you see this message."])
+```
+Only minimal logs (like request and response summaries) are printed, and only at DEBUG level — so normal use remains quiet.
+
+
 ## Reference
 Create a new client.
 ```python
@@ -41,9 +57,7 @@ GridwayAI(api_key: str, base_url: Optional[str] = None)
 ```
 `api_key`: Your GridwayAI API key
 
-`base_url`: Optional override for API URL (defaults to https://api.gridwayai.com)
-
-Get vector embeddings for a list of input strings.
+Get vector embeddings for a list of input strings, or just a single string.
 `embeddings(input: List[str]) -> List[List[float]]`
 
 ## 🤝 License

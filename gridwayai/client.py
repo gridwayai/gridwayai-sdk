@@ -1,6 +1,9 @@
+import logging
 import requests
 from typing import List, Optional
 from .exceptions import AuthenticationError, RateLimitError, APIError
+
+logger = logging.getLogger(__name__)
 
 class GridwayAI:
     """
@@ -39,8 +42,11 @@ class GridwayAI:
             "Content-Type": "application/json"
         }
         payload = {"input": input}
+        logger.debug(f"[GridwayAI] Sending POST to {url} with {len(input)} text(s).")
+
 
         response = requests.post(url, json=payload, headers=headers)
+        logger.debug(f"[GridwayAI] Response {response.status_code}: {response.text[:200]}")
 
         if response.status_code == 401 or response.status_code == 403:
             raise AuthenticationError("Invalid or unauthorized API key.")
